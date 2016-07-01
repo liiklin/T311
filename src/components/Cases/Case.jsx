@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import classnames from 'classnames';
-import styles from './Todo.less';
+import styles from './Case.less';
 
 const Todo = ({ data, onToggleComplete }) => {
   const { text, isComplete } = data;
@@ -32,4 +32,3 @@ Todo.propTypes = {
 };
 
 export default Todo;
-
