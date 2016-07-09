@@ -1,0 +1,26 @@
+.m-breadcrumb {
+  overflow: hidden;
+  width: 220px;
+  font-size: 14px;
+  margin: 10px 0;
+}
+
+.m-breadcrumb > li {
+  float: left;
+  margin: 0 5px;
+}
+
+.m-breadcrumb > li::before {
+  content: '>';
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.m-breadcrumb > li:first-child::before {
+  display: none;
+}
+
+.m-breadcrumb > li > a {
+  color: #0066CC;
+  text-decoration: underline;
+}

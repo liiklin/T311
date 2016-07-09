@@ -1,0 +1,26 @@
+.m-list {
+  width: 570px;
+  margin-left: 10px;
+}
+
+.m-list > fieldset {
+  overflow-y: auto;
+  max-height: 300px;
+  margin-bottom: 10px;
+  background-color: #66FF66;
+}
+
+.m-list > fieldset > legend {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.m-list > fieldset > a {
+  display: block;
+  line-height: 2;
+  font-size: 16px;
+}
+
+.m-list > fieldset > a > .u-icon {
+  margin-right: 10px;
+}

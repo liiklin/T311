@@ -1,0 +1,31 @@
+.g-c {
+  width: 800px;
+  margin: 0 auto;
+}
+
+.u-icon {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  vertical-align: middle;
+}
+
+.u-icon-24 {
+  width: 24px;
+  height: 24px;
+}
+
+.u-icon-word {
+  background-image: url(../img/file_word.png);
+}
+
+.u-icon-question {
+  background-image: url(../img/question_24px_1188141_easyicon.net.png);
+}
+
+.u-icon-file {
+  background-image: url(../img/new_file_18.12px_1188113_easyicon.net.png);
+}
