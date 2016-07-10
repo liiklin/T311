@@ -18,7 +18,7 @@
             </a>
         </fieldset>
     </div>
-    <!-- <m-default :close.sync="close" :modaldata.sync="modaldata" :opentype.sync="opentype"></m-default> -->
+    <m-default :close.sync="close" :modaldata.sync="modaldata" :opentype.sync="opentype"></m-default>
     <!-- <m-not-logged :close.sync="nloginclose"></m-not-logged> -->
 </div>
 

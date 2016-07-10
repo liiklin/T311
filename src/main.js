@@ -39,10 +39,6 @@ router.map({
     '/search': {
         name: 'result',
         component: resolve => require(['./components/Result.vue'], resolve)
-    },
-    '/modal': {
-        name: 'modal',
-        component: resolve => require(['./components/Modal/default.vue'], resolve)
     }
 })
 
