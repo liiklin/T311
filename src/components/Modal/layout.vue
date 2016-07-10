@@ -1,7 +1,7 @@
 <template>
   <div class="m-modal" v-show="!close">
     <h1 class="default-title f-cb">
-      {{ modaldata.name }}
+      {{ modaldata.title }}
       <span @click="closeFn">关闭</span>
       <span v-if="download" @click="downloadfile">下载</span>
     </h1>
@@ -14,10 +14,15 @@
     props: {
       modaldata:Object,
       close: Boolean,
-      download: {
-        type: Boolean,
-        default: true
-      }
+      // download: {
+      //   type: Boolean,
+      //   default: true
+      // }
+    },
+    computed: {
+        canDownload() {
+            return this.$route.path.indexOf('contracts');
+        }
     },
     methods: {
       closeFn() {

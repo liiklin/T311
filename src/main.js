@@ -20,8 +20,8 @@ router.map({
         name: 'questions',
         component: resolve => require(['./components/Container.vue'], resolve)
     },
-    '/sources': {
-        name: 'sources',
+    '/laws': {
+        name: 'laws',
         component: resolve => require(['./components/Container.vue'], resolve)
     },
     '/cases': {

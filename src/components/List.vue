@@ -58,49 +58,24 @@ export default {
                 effectLevels = data.effectLevels;
             });
             PubSub.subscribe('category_id', (msg, data) => {
-                let url = `http://61.139.87.61:8880/categories/${data.category_id}/bases/${path}`;
+                let url = `http://61.139.87.61:50310/repos/${path}/documents`;
+                let name = data.name;
+                console.log(url);
                 $this.$http.get(url)
                     .then(response => {
-                        if (path == 'sources') { //法律
-                            let gp = _.groupBy(response.data.items, (val) => {
-                                return val.effectLevel.name;
-                            });
-
-                            let data = _.map(gp, (val, key) => {
-                                let tmp = _.map(val, (v, k) => {
-                                    return {
-                                        id: v.id,
-                                        title: v.name,
-                                        url: '###'
-                                    }
-                                });
-
-
-                                return {
-                                    title: key,
-                                    list: tmp
-                                }
-                            });
-                            // console.log(_.isEmpty(data));
-                            data = _.isEmpty(data) ? [{
-                                title: response.data.category.name,
-                                list: []
-                            }] : data;
-                            $this.data = data;
-                        } else {
-                            let data = _.map(response.data.items, (val) => {
-                                return {
-                                    id: val.id,
-                                    title: val.name,
-                                    url: '###'
-                                }
-                            });
-                            // console.log(JSON.stringify(data));
-                            $this.data = [{
-                                title: response.data.category.name,
-                                list: data
-                            }];
-                        }
+                        // console.log(JSON.stringify(response.data));
+                        // let data = _.map(response.data.items, (val) => {
+                        //     return {
+                        //         id: val.id,
+                        //         title: val.name,
+                        //         url: '###'
+                        //     }
+                        // });
+                        // console.log(JSON.stringify(data));
+                        $this.data = [{
+                            title: name,
+                            list: response.data
+                        }];
                     });
             });
         },
@@ -113,8 +88,8 @@ export default {
             open(id) {
                 let $this = this,
                     path = this.$route.path.replace('/', ''),
-                    url = `http://61.139.87.61:8880/${path}/${id}`;
-                // console.log(url);
+                    url = `http://61.139.87.61:50310/repos/${path}/documents/${id}`;
+                console.log(url);
                 this.$http.get(url).then(response => {
                     $this.close = false;
                     $this.opentype = path;

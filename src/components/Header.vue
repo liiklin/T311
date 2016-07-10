@@ -1,11 +1,11 @@
 <template>
   <header class="g-h">
-    江湖健法
+    T311
     <a href="###" class="login">登陆</a>
   </header>
   <div class="f-cb">
     <breadcrumb></breadcrumb>
-    <search></search>
+    <!-- <search></search> -->
   </div>
 </template>
 
