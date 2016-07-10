@@ -10,7 +10,7 @@
     <div class="m-list f-fr">
         <fieldset v-for="item in data">
             <legend>
-                {{ item.title + item.list.length + '个' }}
+                {{ item.title + "&nbsp;" + item.list.length + '个' }}
             </legend>
             <a v-for="data in item.list" @click="open(data.id)">
                 <i class="u-icon" :class="[iconClass]"></i>
