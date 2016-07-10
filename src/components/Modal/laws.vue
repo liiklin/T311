@@ -9,7 +9,7 @@
 <!-- 法律 -->
 <div class="default-tab" v-show="opentype == 'laws'">
     <ul class="btns f-cb">
-        <li v-for="item in ['正文','相关法条','相关问题','相关案例']" v-text="item" :class="[index === $index ? 'active' : '']" @click="change($index)"></li>
+        <li v-for="item in ['正文','相关问题','相关案例']" v-text="item" :class="[index === $index ? 'active' : '']" @click="change($index)"></li>
     </ul>
     <ul class="contents">
         <li v-show="index === 0">
@@ -19,24 +19,6 @@
             </div>
         </li>
         <li v-show="index === 1">
-            <div style="max-height:300px;overflow:auto;" v-if="modaldata.hasOwnProperty('clauses') && modaldata.clauses.length">
-                <ul v-for="clause in modaldata.clauses">
-                    <li>
-                        <div>
-                            <span v-text="clause.name"></span>
-                            <span @click="showNode" class="m-showclick">+ 展开</span>
-                        </div>
-                        <fieldset v-html="(clause.content || ' ') | marked" v-show="false">
-                        </fieldset>
-                        </br>
-                    </li>
-                </ul>
-            </div>
-            <div v-else>
-                暂无相关法条
-            </div>
-        </li>
-        <li v-show="index === 2">
             <div style="max-height:300px;overflow:auto;" v-if="modaldata.hasOwnProperty('questions') && modaldata.questions.length">
                 <ul v-for="question in modaldata.questions">
                     <li>
@@ -54,7 +36,7 @@
                 暂无相关问题
             </div>
         </li>
-        <li v-show="index === 3">
+        <li v-show="index === 2">
             <div style="max-height:300px;overflow:auto;" v-if="modaldata.hasOwnProperty('cases') && modaldata.cases.length">
                 <ul v-for="case1 in modaldata.cases">
                     <li>

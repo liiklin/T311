@@ -17,7 +17,8 @@
       vContainer: Container
     },
     ready:function(){
-      this.$http.get(`http://61.139.87.61:8880/effectLevels`)
+      //获取法律效力
+      this.$http.get(`http://61.139.87.61:50310/repos/laws/effect_levels`)
       .then(response => {
         PubSub.publish('effectLevels', {
           effectLevels: response.data

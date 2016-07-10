@@ -23,7 +23,6 @@ let strVar = "";
 strVar += "<li>";
 strVar += "      <div";
 strVar += "        v-show=\"isRoot\"";
-// strVar += "        :class=\"{bold: isFolder}\"";
 strVar += "        @click=\"toggle\"";
 strVar += "        @dblclick=\"changeType\">";
 strVar += "        <span v-if=\"isFolder\"><img v-if=\"open\"src=\"../src/img/square_remove.png\"><img v-else src=\"../src/img/square_add.png\"><\/span>";
