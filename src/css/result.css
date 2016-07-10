@@ -1,0 +1,24 @@
+.m-search-result {
+  
+}
+
+.m-search-result h1 {
+  padding-bottom: 10px;
+  margin: 15px 0;
+  border-bottom: 2px solid green;  
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.m-search-result .result-list > li {
+  font-size: 18px;
+  line-height: 2;
+}
+
+.m-search-result .result-list > li > .u-icon {
+  margin-right: 15px;
+}
+
+.m-search-result .result-list > li > a {
+  color: #0066CC;
+}

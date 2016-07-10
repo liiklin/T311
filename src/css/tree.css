@@ -1,0 +1,31 @@
+.m-tree {
+  width: 220px;
+  box-sizing: border-box;
+  padding: 15px;
+  border: 1px solid #000;
+  font-size: 16px;
+}
+
+.m-tree > .item {
+  cursor: pointer;
+}
+
+.m-tree img {
+  vertical-align: text-bottom;
+}
+
+.m-tree ul {
+  padding-left: 1em;
+}
+
+.m-tree li {
+  line-height: 2;
+}
+
+div.active{
+  color: blue;
+}
+
+.root{
+  
+}

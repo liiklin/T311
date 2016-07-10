@@ -1,0 +1,36 @@
+.m-search {
+  overflow: hidden;
+  width: 580px;
+}
+
+.m-search > .search-box {
+  float: left;
+  width: 470px;
+  box-sizing: border-box;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+.m-search > .search-submit {
+  cursor: pointer;
+  float: right;
+  width: 105px;
+  height: 30px;
+  margin-left: 5px;
+  line-height: 30px;
+  text-align: center;
+  background-color: green;
+  color: #fff;
+}
+.m-search > .search-box > img {
+  vertical-align: middle;
+}
+
+.m-search > .search-box > input {
+  border: none;
+  width: 400px;
+  line-height: 16px;
+  font-size: 14px;
+  text-indent: 5px;
+}
