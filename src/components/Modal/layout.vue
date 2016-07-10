@@ -1,43 +1,45 @@
+<style>
+
+@import '../../css/modal/index.css';
+
+</style>
+
 <template>
-  <div class="m-modal" v-show="!close">
+
+<div class="m-modal" v-show="!close">
     <h1 class="default-title f-cb">
       {{ modaldata.title }}
       <span @click="closeFn">关闭</span>
-      <span v-if="download" @click="downloadfile">下载</span>
+      <span v-if="download == 'contracts'" @click="downloadfile">下载</span>
     </h1>
     <slot></slot>
-  </div>
+</div>
+
 </template>
 
 <script>
-  export default {
+
+export default {
     props: {
-      modaldata:Object,
-      close: Boolean,
-      // download: {
-      //   type: Boolean,
-      //   default: true
-      // }
+        modaldata: Object,
+        close: Boolean
     },
     computed: {
-        canDownload() {
-            return this.$route.path.indexOf('contracts');
+        download() {
+            return this.$route.path.replace('/', '');
         }
     },
     methods: {
-      closeFn() {
-        this.close = true
-      },
-      downloadfile(){
-        let basePath = 'http://61.139.87.61:8880',
-            type = this.$route.path.replace('/',''),
-            downloadUrl = `${basePath}/${type}/${this.modaldata.id}/download`;
-        window.open(downloadUrl);
-      }
+        closeFn() {
+                this.close = true
+            },
+            downloadfile() {
+                let basePath = 'http://61.139.87.61:50310/repos',
+                    type = this.$route.path.replace('/', ''),
+                    downloadUrl = `${basePath}/${type}/documents/${this.modaldata.id}/download`;
+                window.open(downloadUrl);
+            }
     }
-  }
-</script>
+}
 
-<style>
-  @import '../../css/modal/index.css';
-</style>
+</script>
